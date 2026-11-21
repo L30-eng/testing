@@ -1,0 +1,119 @@
+.practice-page-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.preset-btn {
+    background: #17263b;
+    color: #94a3b8;
+    border: 1px solid #293b52;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.preset-btn:hover {
+    background: #233754;
+    color: #ffffff;
+}
+
+.preset-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    font-weight: 600;
+}
+
+.practice-page-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 40px 5%;
+}
+
+.preset-buttons {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 22px;
+    flex-wrap: wrap;
+}
+
+.preset-btn {
+    background: #17263b;
+    color: #94a3b8;
+    border: 1px solid #293b52;
+    padding: 9px 16px;
+    border-radius: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.preset-btn:hover {
+    background: #233754;
+    color: #ffffff;
+}
+
+.preset-btn.active {
+    background: #2563eb;
+    color: #ffffff;
+    border-color: #2563eb;
+    font-weight: 600;
+}
+
+/* Split Layout (Magkatabi ang Editor at Preview) */
+.playground-split {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    align-items: start;
+}
+
+.playground-split .editor-container,
+.playground-split .preview-container {
+    margin: 0;
+    width: 100%;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #293b52;
+    background: #0f172a;
+}
+
+/* Taas ng Code Editor */
+.playground-split .CodeMirror {
+    height: 360px !important;
+    font-size: 14px;
+}
+
+/* Taas ng Live Preview (Hindi na masyadong mataas) */
+.playground-split .preview-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 16px;
+    background: #1e293b;
+    color: #f8fafc;
+    font-size: 13px;
+    font-weight: 600;
+    border-bottom: 1px solid #293b52;
+}
+
+.playground-split #htmlPreview {
+    width: 100%;
+    height: 360px !important; 
+    border: none;
+    background: #ffffff;
+    display: block;
+}
+

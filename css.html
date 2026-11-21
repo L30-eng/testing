@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Learn CSS | WebLearn</title>
+    <link rel="stylesheet" href="css.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <!-- CodeMirror Editor Styles -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.min.css">
+</head>
+<body>
+
+    <header class="top-header">
+        <div class="header-left">
+            <button id="menuToggle" class="menu-toggle">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+            <a href="index.html" class="brand">
+                <span>Web</span>Learn
+            </a>
+        </div>
+
+        <div class="head-links">
+            <a href="index.html">Home</a>
+            <a href="courses.html">Course</a>
+            <a href="practice-css.html" data-lesson="2">Practice</a>
+            <a href="https://forms.gle/sQonif9G7UkDWfEu8" target="_blank" style="color: #38bdf8; font-weight: 600;">
+                <i class="fa-solid fa-paper-plane"></i> Submit Output
+            </a>
+        </div>
+
+        <a href="courses.html" class="back-headcourses">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Courses
+        </a>
+
+        <span class="header-label">CSS Tutorial</span>
+    </header>
+
+    <div class="drawer-overlay" id="drawerOverlay"></div>
+
+    <aside class="lesson-drawer" id="lessonDrawer">
+        <div class="drawer-header">
+            <h3>CSS Lessons</h3>
+            <button id="closeDrawer" class="close-drawer">
+                <i class="fa-solid fa-xmark"></i>
+            </button>
+        </div>
+
+        <div class="sidebar-course">
+            <span class="course-label">Your Courses</span>
+            <h3><i class="fa-brands fa-css3-alt"></i> Learn CSS</h3>
+            <p>Master web styling step by step</p>
+        </div>
+
+        <nav class="lesson-navigation">
+            <span class="nav-heading">GETTING STARTED</span>
+            <button class="lesson-link active" data-lesson="0">
+                <span class="lesson-number">01</span>
+                <span>Introduction to CSS</span>
+            </button>
+            <button class="lesson-link" data-lesson="1">
+                <span class="lesson-number">02</span>
+                <span>The 3 Ways to Add CSS</span>
+            </button>
+
+            <span class="nav-heading">CSS BASICS</span>
+            <button class="lesson-link" data-lesson="2">
+                <span class="lesson-number">03</span>
+                <span>CSS Selectors</span>
+            </button>
+            <button class="lesson-link" data-lesson="3">
+                <span class="lesson-number">04</span>
+                <span>CSS Colors</span>
+            </button>
+            <button class="lesson-link" data-lesson="4">
+                <span class="lesson-number">05</span>
+                <span>CSS Backgrounds</span>
+            </button>
+
+            <span class="nav-heading">BOX & SPACING</span>
+            <button class="lesson-link" data-lesson="5">
+                <span class="lesson-number">06</span>
+                <span>CSS Borders</span>
+            </button>
+            <button class="lesson-link" data-lesson="6">
+                <span class="lesson-number">07</span>
+                <span>CSS Margins</span>
+            </button>
+            <button class="lesson-link" data-lesson="7">
+                <span class="lesson-number">08</span>
+                <span>CSS Padding</span>
+            </button>
+            <button class="lesson-link" data-lesson="8">
+                <span class="lesson-number">09</span>
+                <span>CSS Height & Width</span>
+            </button>
+            <button class="lesson-link" data-lesson="9">
+                <span class="lesson-number">10</span>
+                <span>CSS Box Model</span>
+            </button>
+
+            <span class="nav-heading">STYLING CONTENT</span>
+            <button class="lesson-link" data-lesson="10">
+                <span class="lesson-number">11</span>
+                <span>CSS Text & Fonts</span>
+            </button>
+            <button class="lesson-link" data-lesson="11">
+                <span class="lesson-number">12</span>
+                <span>CSS Links & Hover States</span>
+            </button>
+            <button class="lesson-link" data-lesson="12">
+                <span class="lesson-number">13</span>
+                <span>CSS Lists</span>
+            </button>
+            <button class="lesson-link" data-lesson="13">
+                <span class="lesson-number">14</span>
+                <span>CSS Tables</span>
+            </button>
+
+            <span class="nav-heading">LAYOUT & POSITIONING</span>
+            <button class="lesson-link" data-lesson="14">
+                <span class="lesson-number">15</span>
+                <span>CSS Display Property</span>
+            </button>
+            <button class="lesson-link" data-lesson="15">
+                <span class="lesson-number">16</span>
+                <span>CSS Position</span>
+            </button>
+            <button class="lesson-link" data-lesson="16">
+                <span class="lesson-number">17</span>
+                <span>CSS Overflow & Z-Index</span>
+            </button>
+
+            <span class="nav-heading">MODERN LAYOUTS</span>
+            <button class="lesson-link" data-lesson="17">
+                <span class="lesson-number">18</span>
+                <span>CSS Flexbox Basics</span>
+            </button>
+            <button class="lesson-link" data-lesson="18">
+                <span class="lesson-number">19</span>
+                <span>CSS Grid & Media Queries</span>
+            </button>
+
+            <span class="nav-heading">PRACTICE</span>
+            <button class="lesson-link" data-lesson="19">
+                <span class="lesson-number">*</span>
+                <span>CSS Playground</span>
+            </button>
+        </nav>
+
+        <a href="courses.html" class="back-courses">
+            <i class="fa-solid fa-arrow-left"></i>
+            Back to Courses
+        </a>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <div class="content-wrapper">
+
+            <div class="lesson-topline">
+                <span class="lesson-category" id="lessonCategory">CSS Fundamentals</span>
+                <span id="lessonCounter">Lesson 1 of 3</span>
+            </div>
+            
+            <div class="lesson-heading">
+                <h1 id="lessonTitle">Introduction to CSS</h1>
+                <p id="lessonDescription">
+                    Discover how CSS styles, colors, and designs the layout of modern web pages.
+                </p>
+            </div>
+
+            <!-- Main lesson body -->
+            <section class="lesson-section" id="lessonBody">
+                <div class="intro-banner">
+                    <div>
+                        <span>Welcome to CSS Styling</span>
+                        <h2>Cascading Style Sheets</h2>
+                        <p>While HTML provides the core structure of a webpage, CSS handles the visual presentation, color schemes, and structural layout.</p>
+                    </div>
+                    <div class="banner-icon">
+                        <i class="fa-brands fa-css3-alt"></i>
+                    </div>
+                </div>
+
+                <h2>What is CSS?</h2>
+                <p>CSS stands for <b>Cascading Style Sheets</b>. It is a stylesheet language used to describe the presentation and design of documents written in HTML.</p>
+                
+                <div class="info-box">
+                    <i class="fa-solid fa-lightbulb"></i>
+                    <div><strong>Key Concept:</strong> HTML defines the content structure, while CSS defines the visual design and styling.</div>
+                </div>
+            </section>
+
+            <!-- TAKEAWAYS -->
+            <section class="takeaways">
+                <h2><i class="fa-solid fa-bookmark"></i> Key Takeaways</h2>
+                <ul id="takeawayList">
+                    <li>CSS stands for Cascading Style Sheets.</li>
+                    <li>CSS manages web page styling, design, and responsiveness layout.</li>
+                    <li>Syntax consists of a selector, property, and value.</li>
+                </ul>
+            </section>
+
+            <!-- COMMON MISTAKES -->
+            <section class="mistakes">
+                <h2><i class="fa-solid fa-triangle-exclamation"></i> Common Mistakes</h2>
+                <ul id="mistakeList">
+                    <li>Forgetting to append a semicolon (;) at the end of property declarations.</li>
+                    <li>Typo errors in CSS property names or syntax formatting.</li>
+                </ul>
+            </section>
+
+            <!-- TRY IT YOURSELF -->
+            <section class="practice-section" id="practiceSection" style="display: none;">
+                <div class="practice-heading">
+                    <span class="lesson-category">HANDS-ON PRACTICE</span>
+                    <h2>CSS Playground</h2>
+                    <p>Test and experiment with Inline, Internal, and External CSS below!</p>
+                </div>
+
+                <!-- Preset Buttons -->
+                <div class="preset-buttons">
+                    <button class="preset-btn active" data-preset="inline">Inline CSS</button>
+                    <button class="preset-btn" data-preset="internal">Internal CSS</button>
+                    <button class="preset-btn" data-preset="external">External CSS</button>
+                    <button class="preset-btn" data-preset="login">Login Page Project</button>
+                </div>
+
+                <div class="editor-container">
+    
+    <!-- KALIWANG BAHAGI: Code Editor Pane -->
+    <div class="editor-pane">
+        <div class="editor-topbar">
+            <div class="editor-file">
+                <i class="fa-brands fa-css3-alt"></i>
+                style.css / index.html 
+            </div>
+            <div class="editor-actions">
+                <button id="resetCode">
+                    <i class="fa-solid fa-rotate-left"></i>
+                    Reset
+                </button>
+                <button id="runCode" class="run-button">
+                    <i class="fa-solid fa-play"></i>
+                    Run Code
+                </button>
+            </div>
+        </div>
+
+        <textarea id="htmlEditor" spellcheck="false"></textarea>
+    </div>
+
+    <!-- KANANG BAHAGI: Live Preview Pane -->
+    <div class="preview-pane">
+        <div class="preview-heading">
+            <span><i class="fa-solid fa-eye"></i> Live Preview</span>
+            <span>Browser Output</span>
+        </div>
+        <iframe id="htmlPreview" title="CSS live preview" sandbox="allow-scripts"></iframe>
+    </div>
+
+</div>
+
+
+            </section>
+
+            <!-- LESSON NAVIGATION -->
+            <div class="lesson-navigation-bottom">
+                <button id="previousLesson" class="previous-button" disabled>
+                    <i class="fa-solid fa-arrow-left"></i>
+                    Previous
+                </button>
+                <button id="completeLesson" class="complete-button">
+                    Mark as Complete
+                    <i class="fa-solid fa-check"></i>
+                </button>
+                <button id="nextLesson" class="next-button">
+                    Next Lesson
+                    <i class="fa-solid fa-arrow-right"></i>
+                </button>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- CodeMirror Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/codemirror.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/xml/xml.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/javascript/javascript.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/css/css.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/mode/htmlmixed/htmlmixed.min.js"></script>
+    
+
+    <!-- CSS Error Checker Libraries -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/lint.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/csslint/1.0.5/csslint.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.65.16/addon/lint/css-lint.js"></script>
+    <!-- Main JavaScript -->
+    <script src="css.js"></script>
+</body>
+</html>
